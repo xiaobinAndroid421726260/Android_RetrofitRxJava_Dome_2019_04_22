@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_connect_error">服务器繁忙</string>
+    <string name="common_connect_timeout">网络请求超时</string>
+    <string name="common_bad_network">网络请求出错</string>
+    <string name="common_parse_error">解析错误</string>
+    <string name="common_unknown_error">未知错误</string>
+    <string name="common_keyboard_switch">转换</string>
+    <string name="common_keyboard_confirm">确认</string>
+    <string name="common_remember_pwd">记住密码</string>
+    <string name="common_search">搜索</string>
+</resources>
