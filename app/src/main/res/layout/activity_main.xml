@@ -1,13 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
     <TextView
+            android:id="@+id/tv_text1_review_loan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16.5dp"
+            android:layout_marginLeft="19dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:text="审核状态"/>
 
-</LinearLayout>
+    <View
+            android:id="@+id/oval_top_review_loan"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_text1_review_loan"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/ic_launcher_background"/>
+
+    <View
+            android:id="@+id/line_top_review_loan"
+            android:layout_width="1dp"
+            android:layout_height="53dp"
+            app:layout_constraintLeft_toLeftOf="@id/oval_top_review_loan"
+            app:layout_constraintRight_toRightOf="@id/oval_top_review_loan"
+            app:layout_constraintTop_toBottomOf="@id/oval_top_review_loan"
+            android:background="@color/colorPrimary"/>
+
+    <View
+            android:id="@+id/oval_center_review_loan"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintLeft_toLeftOf="@id/oval_top_review_loan"
+            app:layout_constraintRight_toRightOf="@id/oval_top_review_loan"
+            app:layout_constraintTop_toBottomOf="@id/line_top_review_loan"
+            android:background="@drawable/ic_launcher_background"/>
+
+    <View
+            android:id="@+id/line_bottom_review_loan"
+            android:layout_width="1dp"
+            android:layout_height="53dp"
+            app:layout_constraintLeft_toLeftOf="@id/oval_top_review_loan"
+            app:layout_constraintRight_toRightOf="@id/oval_top_review_loan"
+            app:layout_constraintTop_toBottomOf="@id/oval_center_review_loan"
+            android:background="@color/colorPrimary"/>
+
+    <View
+            android:id="@+id/oval_bottom_review_loan"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintLeft_toLeftOf="@id/oval_top_review_loan"
+            app:layout_constraintRight_toRightOf="@id/oval_top_review_loan"
+            app:layout_constraintTop_toBottomOf="@id/line_bottom_review_loan"
+            android:background="@drawable/ic_launcher_background"/>
+
+    <TextView
+            android:id="@+id/tv_review_result_review_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/oval_top_review_loan"
+            app:layout_constraintTop_toTopOf="@id/oval_top_review_loan"
+            app:layout_constraintBottom_toBottomOf="@id/oval_top_review_loan"
+            android:layout_marginLeft="27.5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:text="借款审核拒绝"/>
+
+    <TextView
+            android:id="@+id/tv_date_review_result_review_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tv_review_result_review_loan"
+            app:layout_constraintBottom_toBottomOf="@id/tv_review_result_review_loan"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:text="2019-10-01 12:34"/>
+
+    <TextView
+            android:id="@+id/tv_reviewing_review_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/oval_center_review_loan"
+            app:layout_constraintBottom_toBottomOf="@id/oval_center_review_loan"
+            app:layout_constraintLeft_toLeftOf="@id/tv_review_result_review_loan"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:text="借款审核中"/>
+
+    <TextView
+            android:id="@+id/tv_date_reviewing_review_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tv_reviewing_review_loan"
+            app:layout_constraintBottom_toBottomOf="@id/tv_reviewing_review_loan"
+            app:layout_constraintRight_toRightOf="@id/tv_date_review_result_review_loan"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:text="2019-10-01 12:34"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_reviewing_review_loan"
+            app:layout_constraintLeft_toLeftOf="@id/tv_review_result_review_loan"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp">
+
+        <TextView
+                android:id="@+id/tv_description_reviewing_review_loan"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:text="我们将在30分钟内反馈结果，我们会尽快处理，请耐心等待"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/tv_submitted_review_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/oval_bottom_review_loan"
+            app:layout_constraintBottom_toBottomOf="@id/oval_bottom_review_loan"
+            app:layout_constraintLeft_toLeftOf="@id/tv_review_result_review_loan"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:text="借款已提交"/>
+
+    <TextView
+            android:id="@+id/tv_date_submitted_review_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tv_submitted_review_loan"
+            app:layout_constraintBottom_toBottomOf="@id/tv_submitted_review_loan"
+            app:layout_constraintRight_toRightOf="@id/tv_date_review_result_review_loan"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:text="2019-10-01 12:34"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_review_result_review_loan"
+            app:layout_constraintTop_toBottomOf="@id/tv_submitted_review_loan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp">
+
+        <TextView
+                android:id="@+id/tv_description_submitted_review_loan"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:text="您的借款已提交至自动化审批系统，我们会尽快完成审核并通知您审核结果"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

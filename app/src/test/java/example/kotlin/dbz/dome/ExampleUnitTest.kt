@@ -1,4 +1,4 @@
-package douban.kotlin.annarm.android_retrofitrxjava_dome_2019_04_22
+package example.kotlin.dbz.dome
 
 import org.junit.Test
 
