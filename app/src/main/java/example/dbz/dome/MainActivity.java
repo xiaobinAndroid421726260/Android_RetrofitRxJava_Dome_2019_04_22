@@ -9,9 +9,7 @@ import example.dbz.dome.bean.BaseResponse;
 import example.dbz.dome.http.BaseObserver;
 import example.dbz.dome.http.RetrofitManager;
 import example.dbz.dome.utils.ToastUtils;
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 import java.util.HashMap;
